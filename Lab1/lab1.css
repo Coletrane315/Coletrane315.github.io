@@ -11,5 +11,7 @@
     justify-content: center;
     position: absolute;
     text-align: center;
-    
+    top: 10vh;
+    width: 20vw;
+    left: 40vw;
 }
