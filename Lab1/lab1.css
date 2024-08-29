@@ -1,7 +1,14 @@
 #randArrButton {
     justify-content: center;
+    position: absolute;
     text-align: center;
     width: 10vw;
     height: 7vh;
     left: 45vw;
+}
+
+#textOutput {
+    justify-content: center;
+    position: absolute;
+    text-align: center;
 }
