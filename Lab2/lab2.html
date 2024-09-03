@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="lab2.css">
+        <script src="lab2.js"></script>
+    </head>
+    <body>
+        <form>
+            <input type="button" id="dateAlertButton" onClick="dateAlert()" value="Date-Time in Alert Pop-up">
+            <input type="button" id="datePageButton" onClick="datePage()" value="Date-Time on Page">
+            <select name="timeType" id="timeTypeDrop">
+                <option value="12hr">12 hours</option>
+                <option value="24hr">24 hours</option>
+            </select>
+        </form>
+        <div id="textOutput">
+            <div id="dateText">The date today is: </div>
+            <div id="dateValue"></div>
+            <div id="timeText">and the current time is: </div>
+            <div id="timeValue"></div>
+        </div>
+    </body>
+</html>

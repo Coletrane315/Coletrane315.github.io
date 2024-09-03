@@ -1,0 +1,29 @@
+#dateAlertButton {
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    width: auto;
+    height: 7vh;
+}
+
+#datePageButton {
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    width: auto;
+    height: 7vh;
+    left: 3vw;
+}
+
+#timeTypeDrop {
+
+}
+
+#textOutput {
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 10vh;
+    width: 20vw;
+    left: 40vw;
+}
