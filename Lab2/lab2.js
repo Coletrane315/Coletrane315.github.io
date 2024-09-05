@@ -12,7 +12,7 @@ datePage(); //Page loaded with on-page display of date and time
 
 
 //Called if the alert button is pressed, changes border color of buttons to show which one is currently selected, 
-//fetches date and time data, formatted to be in 12 or 24 hour scheme based on dropdown menu selection, display in alert
+//displays date and time in alert
 function dateAlert(){
     pageButton.style.borderColor = "black";
     alertButton.style.borderColor = "red";
@@ -23,7 +23,7 @@ function dateAlert(){
 }
 
 //Called if the on-page display button is pressed, changes border color of buttons to show which one is currently selected,
-//fetches date and time data, formatted to be in 12 or 24 hour scheme based on dropdown menu selection, display on page
+//displays date and time on page
 function datePage(){
     alertButton.style.borderColor = "black";
     pageButton.style.borderColor = "red";
@@ -31,7 +31,7 @@ function datePage(){
     onPageTimeText.innerHTML = getTimeText();
 }
 
-//Formats the date as necessary for display
+//fetches and formats date
 function getDateText(){
     return `The date today is: ${monthsArr[dateObj.getMonth()]} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
 }
