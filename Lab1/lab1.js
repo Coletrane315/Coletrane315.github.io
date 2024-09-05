@@ -1,3 +1,8 @@
+//Lab 1, Colten Stamm
+
+
+//called on button press, generates an array of 5 random numbers 0-99, finds the mean,
+//and a second array for which of the 5 numbers are greater than the mean, outputs all of this to HTML
 function fillRandArr(){
     var arr = [];
     var greaterArr = [];
