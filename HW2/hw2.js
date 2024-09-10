@@ -1,0 +1,2 @@
+var canvas;
+var gl;
