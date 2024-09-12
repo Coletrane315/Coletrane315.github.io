@@ -1,3 +1,7 @@
+//Lab 4, Colten Stamm
+//With filling triangle fans and strips, I think that if your points are ordered seemingly randomly, the resulting polygon can
+//be non-simple. I am theorizing that if you order the points from lowest to greatest in terms of x-value, it will fill properly
+
 "use strict";
 var gl;
 var points;
@@ -12,14 +16,14 @@ function init()
 
     points=[
     vec2( -0.95 , -0.95 ),
+    vec2( -0.75, 0.45 ),
+    vec2( -0.35, -0.65 ),
+    vec2( -0.25, 0.45 ),
     vec2(  0.00 , -0.55 ),
-    vec2(  0.85 , -0.85 ),
+    vec2( 0.15, 0.75 ),
+    vec2( 0.25, 0.25 ),
     vec2(  0.75 , -0.25 ),
-    vec2(  0.25 ,  0.25 ),
-    vec2( -0.35 , -0.65 ),
-    vec2( -0.75 ,  0.45 ),
-    vec2(  0.00 ,  0.75 ),
-    vec2( -0.35 ,  0.45 )
+    vec2( 0.85, -0.85 )
     ];
     
     //
@@ -51,11 +55,11 @@ function init()
 function render() {
     gl.clear( gl.COLOR_BUFFER_BIT );
 
-    //gl.drawArrays( gl.POINTS, 0, points.length );
+    gl.drawArrays( gl.POINTS, 0, points.length );
     //gl.drawArrays( gl.LINES, 0, points.length );
     //gl.drawArrays( gl.LINE_STRIP, 0, points.length );
     //gl.drawArrays( gl.LINE_LOOP, 0, points.length );
     //gl.drawArrays( gl.TRIANGLES, 0, points.length );
-    //gl.drawArrays( gl.TRIANGLE_STRIP, 0, points.length );
-    gl.drawArrays( gl.TRIANGLE_FAN, 0, points.length );
+    gl.drawArrays( gl.TRIANGLE_STRIP, 0, points.length );
+    //gl.drawArrays( gl.TRIANGLE_FAN, 0, points.length ); 
 }
