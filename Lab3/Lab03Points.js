@@ -14,7 +14,7 @@ function init()
       vec2(0.5, 0.5),
       vec2(-0.5, -0.5),
       vec2(0.17, -0.83),
-      vec2(1, 1) //I discovered that if a point would extend outside the clipping volume with its provided point size, it shrinks the point to fit 
+      vec2(0.85, 0.85) 
     ];
     
     //

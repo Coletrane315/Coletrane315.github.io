@@ -1,0 +1,9 @@
+#gl-canvas{
+    border-style: solid;
+    border-color: red;
+    border-width: 3px;
+    position: relative;
+    top: 2vh;
+    left: 32vw;
+    width: auto;
+}
