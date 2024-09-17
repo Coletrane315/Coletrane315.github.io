@@ -1,3 +1,5 @@
+//Lab 5, Colten Stamm
+
 "use strict";
 var gl;
 var points;
@@ -9,18 +11,13 @@ function init()
 
     gl = canvas.getContext('webgl2');
     if ( !gl ) { alert( "WebGL isn't available" ); }
-
-    points=[
-        vec2( -0.95 , -0.95 ),
-        vec2( -0.75, 0.45 ),
-        vec2( -0.35, -0.65 ),
-        vec2( -0.25, 0.45 ),
-        vec2( 0.00 , -0.55 ),
-        vec2( 0.15, 0.75 ),
-        vec2( 0.25, 0.25 ),
-        vec2( 0.75 , -0.25 ),
-        vec2( 0.85, -0.85 )
-        ];
+    points = [];
+    //3x3 grid of points
+    for(let x = -0.9; x <= 0.9; x += 0.9){
+        for(let y = -0.9; y <= 0.9; y += 0.9){
+            points.push(vec2(x, y));
+        }
+    }
 
     //
     //  Configure WebGL
