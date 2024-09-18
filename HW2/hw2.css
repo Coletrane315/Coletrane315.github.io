@@ -1,0 +1,32 @@
+#gl-canvas{
+    border-style: solid;
+    border-color: blue;
+    border-width: 3px;
+    position: relative;
+    width: auto;
+    top: 2vh;
+    left: 32vw;
+    margin-bottom: 4vh;
+}
+
+#sliderContainer{
+    position: relative;
+    width: 40vw;
+    left: 34vw;
+}
+
+#slider{
+    position: relative;
+    width: 60%;
+}
+
+#sliderLabel{
+    position: relative;
+    width: 38%;
+}
+
+#sliderLabelVal{
+    position: relative;
+    width: 2%;
+    margin-right: 1%;
+}
