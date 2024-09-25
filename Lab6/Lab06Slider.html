@@ -14,7 +14,9 @@ Oops ... your browser doesn't support the HTML5 canvas element
 </canvas>
 
 <div id="sliderContainer">
-  <input id="slider" type="range" min="0" max="9" step="1" value="0">
+  <label for="slider" id="sliderLabel">Number of Points: </label>
+  <label for="slider" id="sliderLabelVal">0</label>
+  <input id="slider" type="range" min="0" max="9" step="1" value="0" onChange="render()">
 </div>
 
 
@@ -45,8 +47,9 @@ main()
   fColor = vColor;
 }
 </script>
-<script type="text/javascript" src="../Common/initShaders.js"></script>
-<script type="text/javascript" src="../Common/MVnew.js"></script>
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/utility.js"></script>
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/initShaders.js"></script>
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/MVnew.js"></script>
 <script type="text/javascript" src="Lab06Slider.js"></script>
 
 </BODY>

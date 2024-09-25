@@ -1,6 +1,6 @@
 #gl-canvas{
     border-style: solid;
-    border-color: blue;
+    border-color: black;
     border-width: 3px;
     position: relative;
     width: auto;
@@ -12,5 +12,5 @@
 #sliderContainer{
     position: relative;
     width: auto;
-    left: 45vw;
+    left: 40vw;
 }

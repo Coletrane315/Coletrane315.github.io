@@ -1,6 +1,7 @@
 //Lab 4, Colten Stamm
-//With filling triangle fans and strips, I think that if your points are ordered seemingly randomly, the resulting polygon can
-//be non-simple. I am theorizing that if you order the points from lowest to greatest in terms of x-value, it will fill properly
+//I think that if your points are ordered seemingly randomly, the resulting polygon formed from strips and fans
+//can be concave, and therefore GL does not fill properly. 
+//I am potentially theorizing that if you order the points from lowest to greatest in terms of x-value, it will fill properly
 
 "use strict";
 var gl;
@@ -60,6 +61,6 @@ function render() {
     //gl.drawArrays( gl.LINE_STRIP, 0, points.length );
     //gl.drawArrays( gl.LINE_LOOP, 0, points.length );
     //gl.drawArrays( gl.TRIANGLES, 0, points.length );
-    gl.drawArrays( gl.TRIANGLE_STRIP, 0, points.length );
+    //gl.drawArrays( gl.TRIANGLE_STRIP, 0, points.length );
     //gl.drawArrays( gl.TRIANGLE_FAN, 0, points.length ); 
 }
