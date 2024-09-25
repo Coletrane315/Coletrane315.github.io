@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 07 Rotating Tri</title>
+<link rel="stylesheet" href="Lab7.css">
+</head>
+
+<body>
+
+<canvas id="gl-canvas" width="512" height="512"> </canvas>
+<button id="Rotation" onclick="rotation=!rotation;">Toggle Rotation On-Off</button>
+<div id="eventInfo">
+    Press 1 to toggle rotation <br>
+    Press 2 to change color to red <br>
+    Press 3 to change color to green <br>
+    Press 4 to toggle between normal and high rotation speed
+</div>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+#version 300 es
+
+in vec4 aPosition;
+uniform float uTheta;
+
+void main()
+{
+    float s = sin(uTheta);
+    float c = cos(uTheta);
+
+    gl_Position.x = -s*aPosition.y + c*aPosition.x;
+    gl_Position.y =  s*aPosition.x + c*aPosition.y;
+    gl_Position.z = 0.0;
+    gl_Position.w = 1.0;
+
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+uniform vec4 aColor;
+out vec4 fColor;
+
+void main()
+{
+    fColor = aColor;
+}
+</script>
+
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/utility.js"></script>
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/initShaders.js"></script>
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/MVnew.js"></script>
+<script type="text/javascript" src="Lab07RotTriColor.js"></script>
+
+</body>
+</html>

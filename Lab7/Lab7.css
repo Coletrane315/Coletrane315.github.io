@@ -1,0 +1,26 @@
+#gl-canvas{
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    position: relative;
+    width: auto;
+    top: 2vh;
+    left: 32vw;
+    margin-bottom: 2vh;
+}
+
+#Rotation{
+    position: relative;
+    margin-top: 2vh;
+    top: 6vh;
+    left: 8vw;
+}
+
+#eventInfo{
+    position: relative;
+    left: 37vw;
+    top: 10vh;
+    width: fit-content;
+    justify-content: center;
+    text-align: center;
+}
