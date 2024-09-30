@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework 3 Morph</title>
+  <link rel="stylesheet" href="hw3.css">
+</head>
+<body>
+<canvas id="gl-canvas" width="512"" height="512"> </canvas>
+<button id="morphB" onclick="morphButtonClick()">Morph</button>
+<div id="sliderContainer">
+    <label for="slider" id="sliderLabel">Morph Parameter: </label>
+    <label for="slider" id="sliderLabelVal">0.0</label>
+    <input id="slider" type="range" min="0.00" max="1.00" step="0.05" value="0.00" onChange="sliderChange()">
+  </div>
+<script id="vertex-shader" type="x-shader/x-vertex">
+#version 300 es
+in vec4 aPosition;
+in vec4 bPosition;
+out vec4 vColor;
+uniform float t;
+
+void
+main()
+{
+  gl_PointSize = 10.0;
+  gl_Position = aPosition - aPosition * t + bPosition * t;
+  vColor = vec4(gl_Position.xyz * 60.0, 1.0);
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+#version 300 es
+precision mediump float;
+
+in vec4 vColor;
+out vec4 fColor;
+
+void
+main()
+{
+  fColor = vColor;
+}
+</script>
+
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/utility.js"></script>
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/initShaders.js"></script>
+<script type="text/javascript" src="../cs330 Code For Moodle/Common/MVnew.js"></script>
+<script type="text/javascript" src="hw3.js"></script>
+
+</body>
+</html>
