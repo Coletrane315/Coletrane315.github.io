@@ -1,0 +1,16 @@
+#gl-canvas{
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    position: relative;
+    top: 2vh;
+    left: 32vw;
+    margin-bottom: 2vh;
+}
+
+#buttons{
+    position: relative;
+    margin-top: 2vh;
+    top: 6vh;
+    left: 38vw;
+}
